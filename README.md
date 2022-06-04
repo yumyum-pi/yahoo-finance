@@ -55,12 +55,12 @@ func main() {
 	ticket := yahooFinace.NewTicker("TANLA.NS")
 	currentMarket, err := ticket.GetPrice()
 	if err != nil {
-			log.Fatalf("Unexpected Error: %s", err)
+		log.Fatalf("Unexpected Error: %s", err)
 	}
 	
-  fmt.Println(currentMarket.Price)
-  fmt.Println(currentMarket.Change)
-  fmt.Println(currentMarket.ChangePercentage)
+  	fmt.Println(currentMarket.Price)
+  	fmt.Println(currentMarket.Change)
+  	fmt.Println(currentMarket.ChangePercentage)
 }
 
 ```
