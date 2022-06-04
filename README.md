@@ -36,16 +36,6 @@ Make sure go modules are working in your project.
 package main
 
 import (
-  "fmt"
-  "log"
-  "net/http"
-
-  "github.com/PuerkitoBio/goquery"
-)
-
-package test
-
-import (
 	"fmt"
 
 	yahooFinace "github.com/yumyum-pi/yahoo-finance
