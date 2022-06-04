@@ -48,7 +48,7 @@ package test
 import (
 	"fmt"
 
-	yahooFinace "github.com/yumyum-pi/yahooFinance"
+	yahooFinace "github.com/yumyum-pi/yahoo-finance
 )
 
 func main() {
