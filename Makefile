@@ -7,7 +7,7 @@ build:
 	go build -o ${BINARY_NAME} ${MAIN}
 
 test:
-	go test -v
+	go test -v ./*/*
 
 run:
 	go build -o ${BINARY_NAME} ${MAIN}
