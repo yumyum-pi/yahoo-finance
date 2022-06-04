@@ -1,4 +1,4 @@
-module github.com/yumyum-pi/go-yahoo-finance
+module github.com/yumyum-pi/yahooFinance
 
 go 1.18
 
