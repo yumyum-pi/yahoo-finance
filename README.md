@@ -24,3 +24,33 @@ Yahoo! finance API is intended for personal use only.**
 
 
 Go module to scrape stock data from Yahoo Finance
+
+## Installation
+yahooFinance requires Go1.1+ and is tested on Go1.8+.
+Make sure go modules are working in your project.
+
+    $ go get github.com/yumyum-pi/yahoo-finance
+    
+## Examples
+```Go
+package main
+
+import (
+	"fmt"
+
+	yahooFinace "github.com/yumyum-pi/yahoo-finance"
+)
+
+func main() {
+	ticket := yahooFinace.NewTicker("TANLA.NS")
+	currentMarket, err := ticket.GetPrice()
+	if err != nil {
+		log.Fatalf("Unexpected Error: %s", err)
+	}
+	
+  	fmt.Println(currentMarket.Price)
+  	fmt.Println(currentMarket.Change)
+  	fmt.Println(currentMarket.ChangePercentage)
+}
+
+```
