@@ -1,6 +1,7 @@
 package test
 
 import (
+	"fmt"
 	"testing"
 
 	yahooFinace "github.com/yumyum-pi/yahooFinance"
@@ -21,6 +22,8 @@ func TestGetPrice(t *testing.T) {
 		}
 	}
 }
+
+// TODO make test cases for get price
 func TestGetPriceFail(t *testing.T) {
 	tanla := yahooFinace.NewTicker("TANLLLA.NS")
 	_, err := tanla.GetPrice()
@@ -28,4 +31,14 @@ func TestGetPriceFail(t *testing.T) {
 		t.Errorf("was expecting an error")
 	}
 
+}
+
+// TODO make test cases for get summery
+func TestGetSummery(t *testing.T) {
+	tanla := yahooFinace.NewTicker("TANLA.NS")
+	summery, err := tanla.GetSummery()
+	if err != nil {
+		t.Errorf("Unexpected Error: %s", err)
+	}
+	fmt.Println(summery)
 }
